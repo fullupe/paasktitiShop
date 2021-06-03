@@ -14,8 +14,8 @@ function ModalPay({total}) {
               <input name="merchant_key" type="hidden" Value="tk_c882ed60-0f4e-11e9-b30b-f23c9170642f" />
               <input id="merchant_code" type="hidden" Value="TST000000002316" />
               <input name="source" type="hidden" Value="WIDGET" />
-              <input name="success_url" type="hidden" Value="http://localhost:3000/successful" />
-              <input name="cancelled_url" type="hidden" Value="http://localhost:3000/cancelled" />
+              <input name="success_url" type="hidden" Value="https://opshop.vercel.app/successful" />
+              <input name="cancelled_url" type="hidden" Value="https://opshop.vercel.app/cancelled" />
               <input id="invoice_id" name="invoice_id" type="hidden" Value={total} />
               <div className="flex flex-col">
                 <div className="col-lg">
