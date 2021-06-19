@@ -12,6 +12,7 @@ import {
     } from "@heroicons/react/outline";
 import HeaderItem from "./HeaderItem";
 import { PhoneAndroid } from "@material-ui/icons";
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { selectItems} from "../slices/basketSlice";
@@ -50,7 +51,7 @@ function Header({title}) {
         <div onClick={()=>router.push('/')} className=" flex flex-col items-center text-white  h-14 ">
             
             <HeaderItem className=""Icon={ShoppingCartIcon}/> 
-            <span onClick={()=>router.push('/')} className="text-xl font-bold cursor-pointer tracking-widest">OP'S {title}</span>
+            <span onClick={()=>router.push('/')} className="text-xl font-bold cursor-pointer tracking-widest">PAASKTITI {title}</span>
         </div>
         <div className="flex flex-row items-center max-w-2xl"></div>
 
@@ -63,7 +64,7 @@ function Header({title}) {
             <span className="absolute top-0 right-0 md:right-4 h-6 w-6 bg-yellow-400 text-center rounded-full group-hover:animate-bounce">
               {items.length}
             </span>
-             <HeaderItem click={GoTOCheckout} className="h-10" title="CHECKOUT"Icon={ShoppingCartIcon}/>
+             <HeaderItem click={GoTOCheckout} className="h-10" title="CHECKOUT"Icon={ShoppingBasketIcon}/>
              </div>
         </div>
         {session ? (<div onClick={signOut} className="cursor-pointer">Welcome {session.user.name} </div>):( <div onClick={signIn} className="cursor-pointer">LogIn</div> )}

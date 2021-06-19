@@ -16,14 +16,14 @@ const Banner = () => {
         <div>
           <img
             loading="lazy"
-            src="https://th.bing.com/th/id/Ra3ac153bd225d28f2b3ef7398c9a5383?rik=G9oJvndCu%2fEmvA&pid=ImgRaw"
+            src="https://res.cloudinary.com/fullupe/image/upload/v1624027786/pascktiti/beadbags_cf1pqu.png"
           />
         </div>
 
         <div>
           <img
             loading="lazy"
-            src="https://res.cloudinary.com/fullupe/image/upload/v1621214089/YOUTUB-J-E-G/5ad4e8a9-e9ca-4555-a6b7-a720e5648e06_3_wmtnfe.png"
+            src="https://res.cloudinary.com/fullupe/image/upload/v1624027767/pascktiti/9bf167c4819bda569e37f709722ac717_otxsdh.png"
           />
         </div>
 
@@ -33,6 +33,15 @@ const Banner = () => {
             src="https://res.cloudinary.com/fullupe/image/upload/v1622590120/YOUTUB-J-E-G/PHOTO-2021-05-25-19-32-43_3_ko055l.png"
           />
         </div>
+
+        <div>
+          <img
+            loading="lazy"
+            src=" https://res.cloudinary.com/fullupe/image/upload/v1624043001/pascktiti/phoneAccessories_wjbc16.png"
+          />
+        </div>
+
+       
       </Carousel>
     </div>
   );

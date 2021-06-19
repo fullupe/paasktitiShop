@@ -15,7 +15,7 @@ function AdminPannelOnly() {
 
   //console.log(logInUser)
     return (
-        <main className="flex w-full min-h-screen justify-center items-center">
+        <main className="flex w-full min-h-screen justify-center items-center bg-gray-800">
             
         <container className=" flex flex-col space-y-6 bg-blue-900 w-full max-w-4xl p-8 rounded-xl shadow-lg text-white  "  >
             <Header title="-ADMIN PANNEL"/>

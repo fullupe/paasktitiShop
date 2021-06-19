@@ -1,5 +1,5 @@
 import Currency from "react-currency-formatter";
-function Orders({url,description,price,id}) {
+function Orders({url,description,price,id,qnt}) {
     return (
         <div className="">
             
@@ -11,6 +11,8 @@ function Orders({url,description,price,id}) {
           <div className="text-xm mt-2 my-2 line-clamp-2">{description}</div>
          
           <Currency quantity={price} currency="GHS" />
+
+          <p>Quantity:{qnt}</p>
             
         </div>
       

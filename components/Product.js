@@ -29,14 +29,15 @@ function Product({setSelectedImg, id,price,description,url,status}) {
 
       {/* {docs && docs.map(doc =>( */}
       
-      <div className="flex flex-col h-60 w-60 items-center rounded-lg bg-white text-gray-800 space-y-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 sm:w-59 sm:m-2 ">
+      <div className="flex flex-col h-80 w-60 items-center rounded-lg bg-white text-gray-800 space-y-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 sm:w-59 sm:m-2 ">
         
            <div key={id} onClick={()=>setSelectedImg(url)} className="p-2 h-28 ">
 
-          <img layout="responsive"
+          <Image 
              src={url} alt="" 
-              width='100'
-              height='100'/>
+              width={100}
+              height={100}/>
+              
           </div>
 
           <div className="mt-2">
@@ -56,7 +57,7 @@ function Product({setSelectedImg, id,price,description,url,status}) {
 
           
 
-           <div className="p-2 flex items-center ">
+           <div className="p-2 flex items-center sticky bottom-0 ">
              <button onClick={addItemToBasket} className="inline-block self-end rounded-lg bg-cyan-800 text-white font-bold px-6 py-2 uppercase text-sm">Place Order</button>
            </div>
       

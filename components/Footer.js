@@ -1,11 +1,18 @@
 import FooterItem from "./FooterItem"
+import PowerIcon from '@material-ui/icons/Power';
+import StorefrontIcon from '@material-ui/icons/Storefront';
+import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
+import { useRouter } from "next/router";
 
 function Footer() {
+    const router = useRouter();
     return (
         <div className="flex flex-grow mt-20 justify-evenly pt-6  items-center" >
-        <FooterItem title="Names" url="https://res.cloudinary.com/fullupe/image/upload/v1621214394/YOUTUB-J-E-G/tab-2_qp1t5s.png"/>
-          <FooterItem title="Blanding" url="https://res.cloudinary.com/fullupe/image/upload/v1621214393/YOUTUB-J-E-G/tab-1_t4ktgz.png" />
-          <FooterItem title="3D Design" url="https://res.cloudinary.com/fullupe/image/upload/v1621214393/YOUTUB-J-E-G/tab-3_dh2ykr.png" />
+        
+        <FooterItem className="animate-bounce" title="Electricals" url={<PowerIcon onClick={()=>router.push('/producsCategoryElectrical')}/>}/>
+        <FooterItem className="animate-bounce" title="Fashion" url={<StorefrontIcon onClick={()=>router.push('/productsCategoryFashion')}/>}/>
+        <FooterItem className="animate-bounce" title="Phone's" url={<PhoneIphoneIcon onClick={()=>router.push('/productsCategoryPhone')}/>}/>
+        
 
         </div>
     )

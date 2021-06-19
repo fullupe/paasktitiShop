@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { selectItems, selectTotal} from "../slices/basketSlice";
 import CheckOutProducts from "../components/CheckOutProducts";
 import { useSession } from "next-auth/client";
-
+import { groupBy } from "lodash";
 import { useRouter } from "next/router";
 
 function Checkout() {
@@ -30,9 +30,12 @@ function Checkout() {
       router.push('/modalPayOnDelivery')
 
     }
+    const groupedItems = Object.values(groupBy(items, "id"));
+
+    console.log(groupedItems)
    
     return (
-        <main className="  flex w-full min-h-screen justify-center items-center">
+        <main className="  flex w-full min-h-screen justify-center items-center bg-gray-800">
             
         <container className="relative flex flex-col space-y-6 bg-blue-900 w-full max-w-4xl p-8 rounded-xl shadow-lg text-white  "  >
             <Header/>
@@ -52,14 +55,15 @@ function Checkout() {
               {items.length === 0 ? "Your Basket is Empty." : "Shopping Basket"}
             </h1>
 
-            {items.map((item, i) => (
+            {groupedItems.map((item, i) => (
               <CheckOutProducts
                 key={i}
-                id={item.id}
+                id={item[0].id}
                 // title={item.title}
-                price={item.price}
-                description={item.description}
-                url={item.url}
+                price={item[0].price}
+                description={item[0].description}
+                url={item[0].url}
+                qnt={item.length}
                 // hasPrime={item.hasPrime}
               />
            
@@ -80,22 +84,22 @@ function Checkout() {
                     {/* {total}  */}
                 </span>
               </h2>
-              <button onClick={GoToPayment}
+              {/* <button onClick={GoToPayment}
                 className={`button mt-2 ${
                   !session &&
                   "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed"
                 }`}
               >
                 {!session ? "sign in to checkout" : "proceed Mobile Money"}
-              </button>
+              </button> */}
 
               <button onClick={GoToPaymentMobileMOney}
                 className={`button mt-2 ${
                   !session &&
-                  "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed"
+                  "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed pointer-events-none"
                 }`}
               >
-                {!session ? "sign in to checkout" : "proceed to PayOnDelivery"}
+                {!session ? "sign in to checkout" : "proceed to Payments"}
               </button>
 
               
