@@ -170,7 +170,7 @@ function UploadForm() {
           </datalist>
         </div>
 
-        {session.user.email == "fullupe@gmail.com" ? (
+        {session.user.email == "fullupe@gmail.com" || "paakstiti@gmail.com" ? (
           <button
             disabled={!file || !priceInputRef || !descriptionInputRef || !categoryInputRef}
             className="inline-block  rounded-lg bg-cyan-800 text-white font-bold px-6 py-2 uppercase text-sm"
