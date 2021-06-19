@@ -80,7 +80,7 @@ function Checkout() {
               <h2 className="whitespace-nowrap text-black">
                 subTotal ({items.length}):
                 <span className="font-bold">
-                  <Currency quantity={total} currency="GHS"/>
+                  <Currency quantity={total} currency="NGN"/>
                     {/* {total}  */}
                 </span>
               </h2>

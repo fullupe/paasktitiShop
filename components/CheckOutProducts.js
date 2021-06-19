@@ -45,7 +45,7 @@ function CheckOutProducts({
 
           <div className="text-xm mt-2 my-2 line-clamp-2">{description}</div>
              {/* <p>{price}</p> */}
-          <Currency quantity={price} currency="GHS" />
+          <Currency quantity={price} currency="NGN" />
             
       </div>
       {/* Right add/Remove buttons */}

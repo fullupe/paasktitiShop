@@ -45,7 +45,7 @@ function Product({setSelectedImg, id,price,description,url,status}) {
             <p className="mt-2">
            {/* <small>₦ </small> */}
            <strong>
-           <Currency quantity={price} currency="GHS" />
+           <Currency quantity={price} currency="NGN" />
              </strong>
           </p>
 

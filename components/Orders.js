@@ -10,7 +10,7 @@ function Orders({url,description,price,id,qnt}) {
     
           <div className="text-xm mt-2 my-2 line-clamp-2">{description}</div>
          
-          <Currency quantity={price} currency="GHS" />
+          <Currency quantity={price} currency="NGN" />
 
           <p>Quantity:{qnt}</p>
             

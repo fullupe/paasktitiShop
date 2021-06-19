@@ -84,7 +84,7 @@ function EditProductForm() {
       <p>{doc.description}</p>
       <p className="mt-2">
      {/* <small>₦</small> */}
-     <strong><Currency quantity={doc.price} currency="GHS" /></strong>
+     <strong><Currency quantity={doc.price} currency="NGN" /></strong>
      
     </p>
 
